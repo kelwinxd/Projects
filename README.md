@@ -1,5 +1,4 @@
-<html>
-<head>
+
   <style type="text/css">
     .loading {
       margin: 60px auto;
@@ -9,7 +8,7 @@
       height: 60px;
       border-radius: 4px;
 
-      /* Aqui declaramos nossa animação inline */
+      
       animation: rotate 3s infinite linear;
     }
     
@@ -24,6 +23,6 @@
   </style>
 </head>
 <body>
-  <div class="loading"></div>
+  <div class="loading">Kelwin</div>
 </body>
 </html>
