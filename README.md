@@ -1,7 +1,28 @@
 
- <h2>Fantastic Animals - HTML, CSS and JS</h2>
-   <p>Using JS and CSS effects like accordion, fading animation, scroll animation and so on. </p>
+  <style type="text/css">
+    .loading {
+      margin: 60px auto;
+      border: 3px solid #094CFA;
+      background: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 4px;
+
+      
+      animation: rotate 3s infinite linear;
+    }
     
- <img src="Animais Fantásticos/src/assets/gif1.gif"  width="1000" height="500">
-
-
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="loading">Kelwin</div>
+</body>
+</html>
