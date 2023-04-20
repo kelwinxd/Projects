@@ -1,1 +1,1 @@
-<img src="src/gifmaster.gif" height="500" width="980" >
+<img src="src/gifmaster.gif" height="475" width="700" >
