@@ -74,7 +74,7 @@ def getWeather():
 # its a input
 
 
-nameImage = PhotoImage(file="Tkinter/ret1.png")
+nameImage = PhotoImage(file="Weather-Finder/ret1.png")
 Boxsearch = Label(image=nameImage, bg="#3A3967")
 Boxsearch.place(x=50, y=50)
 
@@ -86,12 +86,12 @@ name.focus()
 
 #importing image
 
-imgsearch = PhotoImage(file="Tkinter/search.png")
+imgsearch = PhotoImage(file="Weather-Finder/search.png")
 SearchButton = Button(screen, image=imgsearch, bg="#292929", border=0, cursor="hand2", command=getWeather)
 SearchButton.place(x=310, y=58)
 
 
-ImgTemp = PhotoImage(file="Tkinter/temp.png")
+ImgTemp = PhotoImage(file="Weather-Finder/temp.png")
 tempWall = Label(screen, image=ImgTemp, bg="#3A3967")
 tempWall.place(x=48, y=115)
 temp = Label(screen, bg="#1E1D1D", font=("poppins", 40, "bold"), fg="white")
@@ -99,7 +99,7 @@ temp.place(x=135, y=160)
 
 
 
-ImgClock = PhotoImage(file="Tkinter/ret22.png")
+ImgClock = PhotoImage(file="Weather-Finder/ret22.png")
 time = Label(screen,bg="#3A3967", image=ImgClock )
 time.place(x=280, y=150)
 clock = Label(screen, bg="#292929", font=("poppins", 16, "bold"), fg="white")
