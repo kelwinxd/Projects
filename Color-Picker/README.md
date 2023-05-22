@@ -3,4 +3,4 @@
    <p>Thinking about making color styling easier and more flexible for programmers, I created an interface that generates custom colors and copies the HSL code, from programmer to programmer. </p>
 
     
- <img src="src/assets/gif1.gif"  width="800" height="500">
+ <img src="src/assets/gif1.gif"  width="1000" height="500">
