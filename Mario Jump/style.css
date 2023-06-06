@@ -1,0 +1,148 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    background-color: black;
+    
+}
+.game-board {
+    width: 90%;
+    height: 580px;
+    border-bottom: 80px solid green;
+    margin: auto auto;
+    background-image: linear-gradient(rgb(49, 144, 175), lightblue);
+    position: relative;
+    overflow: hidden;
+
+}
+
+.cloud {
+    position: absolute;
+    width: 500px;
+    
+    
+}
+
+.two {
+right: -550px;
+    bottom: 150px;
+    
+}
+
+.score {
+    color: #fff;
+    background-color: brown;
+    width: 100px;
+    height: 2.2rem;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    font-size: 2rem;
+    z-index: 2000;
+    right: 10%;
+    padding: 19px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cloudsA {
+    animation: clouds 15s infinite linear;
+}
+
+@keyframes clouds {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+.pipe {
+position: absolute;
+bottom: 0;
+width: 70px;
+animation: pipe-animation 1.9s infinite linear;
+
+
+}
+
+@keyframes pipe-animation {
+    from {
+       right: -50px;
+    }
+     to {
+        right: 100%;
+     }
+}
+
+.animation {
+    animation: pipe-animation 2.8s infinite linear;
+}
+
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+
+@keyframes jump {
+    0% {
+      bottom: 0;
+    }
+    40% {
+      bottom: 210px;
+    }
+
+    50% {
+      bottom: 180px;
+    }
+
+    60% {
+      bottom: 170px;
+    }
+    100% {
+       bottom: 0;
+    }
+}
+
+.block {
+    display: block;
+}
+
+.koopa {
+    width: 170px;
+    transform: scaleX(-1);
+    position: absolute;
+bottom: -30px;
+right: 100%;
+
+
+}
+
+.bullet {
+    width: 250px;
+    
+    position: absolute;
+bottom: -5px;
+right: 100%;
+}
