@@ -1,6 +1,6 @@
 # 3D Model Project
 
-![Project Image](project_image.jpg)
+![Project Image](./Imgs/project.png)
 
 ## Overview
 
