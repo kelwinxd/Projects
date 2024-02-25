@@ -1,0 +1,33 @@
+@import url('./style/model3d.css');
+@import url('./style/colors.css');
+
+body {
+  background-color: #212121;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  max-width: 1100px;
+  min-width: 1000px;
+  margin: 5rem auto;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  align-items: center;
+}
+
+
+
+
+
+
+
+

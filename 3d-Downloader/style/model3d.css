@@ -1,0 +1,51 @@
+.model3d {
+    width: 500px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(63, 63, 63);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.model3d model-viewer {
+    width: 400px;
+    height: 400px;
+    transition: all 1s ease;
+    background-color: transparent;
+    
+    
+}
+
+.model3d p {
+  position: absolute;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.animation {
+    animation: side .5s ease-in-out forwards;
+  }
+  
+  
+  @keyframes side {
+    0% {
+      transform: translateX(0);
+     
+    }
+    50% {
+      transform: translateX(120%);
+     
+    }
+  
+  
+   
+  
+    100% {
+      transform: translateX(0);
+     
+    }
+  }
+  
+  

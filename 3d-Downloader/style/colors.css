@@ -1,0 +1,61 @@
+.color {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .red {
+    background-color: red;
+    
+  }
+  
+  .pink {
+    background-color: rgb(187, 35, 179);
+  }
+  
+  .blue {
+    background-color: rgb(36, 24, 197);
+  }
+  
+  
+  .color.active-color {
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+  
+  .active-color model-viewer {
+    animation: side .8s ease forwards;
+  }
+  
+  .divcolor {
+    display: flex;
+    gap: 1rem;
+  
+  }
+  
+  #downloadButton {
+    margin-top: 2rem;
+    border: none;
+    background-color: #fff;
+    width: 250px;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+  }
+  
+  
+  .colors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   align-items: center;
+  
+  }
+  
+  .colors h2 {
+    display: block;
+    color: #fff;
+  }
+  
