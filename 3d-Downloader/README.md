@@ -5,6 +5,7 @@
 ## Overview
 
 This project is a showcase of a 3D model viewer with interactive features. It allows users to explore different colors of a 3D model and download corresponding GLB files.
+![Project Image](./Imgs/modeling.png)
 
 ## Features
 

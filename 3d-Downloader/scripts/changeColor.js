@@ -18,7 +18,7 @@ export default function changeColor() {
         setTimeout(() => {
 
             Model.setAttribute('src', modelSrc);
-        }, 400)
+        }, 350)
 
         setTimeout(() => {
             Model.classList.remove("animation")
