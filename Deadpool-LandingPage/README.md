@@ -6,6 +6,7 @@
 
 This project demonstrates a simple parallax effect during page scrolling. The parallax effect is achieved by moving objects at different speeds, creating an illusion of depth.
 
+![Parallax Scroll](showcase2.png)
 ## Project Contents
 
 - `index.html`: HTML file containing the basic page structure.
