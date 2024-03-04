@@ -1,6 +1,6 @@
 # Parallax Scroll Project
 
-![Parallax Scroll](parallax-scroll-demo.gif)
+![Parallax Scroll](showcase.png)
 
 ## Description
 
@@ -11,4 +11,5 @@ This project demonstrates a simple parallax effect during page scrolling. The pa
 - `index.html`: HTML file containing the basic page structure.
 - `style.css`: CSS file with styles to create the parallax effect.
 - `script.js`: JavaScript file that handles the parallax effect during scrolling.
+- `Blender `: To model and animate.
 
