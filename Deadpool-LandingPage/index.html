@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <style>
+
+      html {
+        margin: 0;
+      }
+        * {
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+             
+            background-repeat: none;
+            display: flex;
+            justify-content: center;
+            max-height: 5400px;
+            overflow-x: hidden;
+            background-color: gray;
+            
+            
+        }
+        model-viewer.bones {
+            
+            width: 2000px;
+            height: 2000px;
+            
+            position: absolute;
+            left: 180%;
+            top: 50%;
+            transform: translate(-50%,10px);
+            z-index: 1000;
+            transform-style: preserve-3d;
+          
+           
+           
+        }
+
+        .wol {
+          width: 2000px;
+            height: 2000px;
+            
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translate(-20px,-1000px);
+            z-index: 1000;
+            transform-style: preserve-3d;
+            z-index: -1;
+           
+        }
+
+        .head {
+          width: 500px;
+            height: 500px;
+            
+            position: absolute;
+            left: 50%;
+            top: 3700px;
+            transform: translateX(-50%);
+            z-index: 1000;
+            transform-style: preserve-3d;
+            z-index: -1;
+            transition: all 2s ease;
+            
+        }
+
+        .rotate {
+          animation: rotation 4s linear forwards;
+        }
+
+        @keyframes rotation {
+          from {
+            transform: rotateZ(0deg);
+          }
+
+          to {
+            transform: rotateZ(500deg);
+          }
+        }
+
+        .containerwol {
+          position: absolute;
+          left: -500px;
+          top: 10%;
+          transition: all 2s ease;
+        }
+
+        .container {
+          perspective: 1000px;
+        }
+
+        .logo {
+          position: absolute;
+            left: -50%;
+            top: 50%;
+            transform: translate(-50%,400px);
+         
+        }
+
+        .logow {
+          position: absolute;
+            left: -50%;
+            top: 50%;
+            transform: translate(-50%,1700px);
+            transition: all 1.5s ease;
+        }
+
+        .logodead {
+          width: 1500px;
+        }
+
+        .description {
+          position: absolute;
+            left: 70%;
+            top: 50%;
+            transform: translate(-50%,2300px);
+            transition: all 1s ease;
+            width: 600px;
+            opacity: 0;
+
+            
+        }
+
+        .description h2 {
+          font-size: 6rem;
+          font-family: "Karla", sans-serif;
+          color: #fff;
+          text-align: center;
+        }
+
+        .description p {
+          font-size: 2rem;
+          font-family: "Karla", sans-serif;
+          color: #fff;
+          text-align: center;
+        }
+
+        .active {
+          animation: show 1.5s forwards;
+        }
+
+        .footer {
+          position: absolute;
+          left: 50%;
+            top: 50%;
+            transform: translate(-50%,4900px);
+        }
+
+        @keyframes show {
+         from {
+            opacity: 0;
+            transform: translate(1000px,2300px);
+         }
+         
+         to {
+          opacity: 1;
+          transform: translate(-42%,2300px);
+         }
+
+
+        }
+
+        .scroll {
+          position: absolute;
+          top: 10px;
+          font-size: 2rem;
+          color: #fff;
+          animation: heartbeat 1.5s ease-in-out infinite both;
+          text-align: center;
+        }
+        @keyframes heartbeat {
+  from {
+    transform: scale(1);
+    transform-origin: center center;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    transform: scale(0.91);
+    animation-timing-function: ease-in;
+  }
+  17% {
+    transform: scale(0.98);
+    animation-timing-function: ease-out;
+  }
+  33% {
+    transform: scale(0.87);
+    animation-timing-function: ease-in;
+  }
+  45% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+}
+   .fundo {
+            background: url('./bg.jpg') no-repeat ;
+            background-size: cover;
+            height: 3500px;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            
+            left: 0;
+            z-index: -10; /* Coloca a div atrás do conteúdo */
+           
+   }
+
+   .fundo2 {
+    background: url('./bg.jpg') no-repeat ;
+            background-size: cover;
+            height: 1000px;
+            width: 100vw;
+            position: absolute;
+            top: 3500px;
+            
+            left: 0;
+            z-index: -10; /* Coloca a div atrás do conteúdo */
+   }
+   .filter2 {
+    background: radial-gradient(rgba(194, 12, 12, 0.4), rgba(8, 0, 0, 0.9)) no-repeat;
+    background-size: cover;
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    top: 3500px;
+    left: 0;
+    z-index: -8;
+   }
+
+   .filter3 {
+    background: url('./ground.jpg') no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    top: 3500px;
+    left: 0;
+    z-index: -10;
+   }
+   .filter4{
+    background: url('./wall.jpg') no-repeat ;
+            background-size: cover;
+            height: 3500px;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            opacity: 0.2;
+            left: 0;
+            z-index: -10; 
+   }
+   .wolfundo {
+    clip-path: polygon(0 0, 27% 0, 67% 100%, 0% 100%);
+    background:url('./wallwol.jpg');
+            background-size: cover;
+            height: 3500px;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            opacity: 0.2;
+            left: -2000px;
+            z-index: -7; /* Coloca a div atrás do conteúdo */
+            transition: all 1.4s ease;
+   }
+
+
+   .filter {
+    background: radial-gradient(rgba(150, 6, 6, 0.6), rgba(19, 1, 1, 0.9)) no-repeat;
+    background-size: cover;
+    height: 3500px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -8;
+}
+    </style>
+     <div class="filter"></div>
+    <div class="fundo"></div>
+    <div class="fundo2"></div>
+    <div class="filter4"></div>
+    <div class="filter2"></div>
+    <div class="filter3"></div>
+    <div class="wolfundo"></div>
+
+    <div class="scroll">
+      <h2>scroll down <br>↓ </h2>
+    </div>
+  <div class="container">
+
+    <div class="logo">
+      <img src="./logodead.png" alt="" srcset="" class="logodead">
+    </div>
+    <div class="logow">
+      <img src="./wollogo.png" alt="" srcset="" class="logodead wol-logo" >
+    </div>
+
+    <div class="description">
+      <h2>Julho de 2024</h2>
+      <p>Deadpool & Wolverine is an upcoming American superhero film based on the Marvel Comics characters Deadpool and Wolverine, produced by Marvel Studios, Maximum Effort, and 21 Laps Entertainment, and distributed by Walt Disney Studios Motion Pictures.</p>
+    </div>
+    <div class="containerwol" style="display:none">
+      <model-viewer class="bones wol"
+   
+      ar
+      ar-modes="webxr scene-viewer"
+      scale="1 1 1"
+      shadow-intensity="2"
+      camera-orbit="-45deg 23deg 4m"
+      src="./wolverine.glb"
+      alt="An animated 3D model of a robot"
+      
+     
+    ></model-viewer>
+    </div>
+
+    <div class="model3d">
+      <!--   <p>Sword</p>
+       camera-controls
+      touch-action="pan-y"
+
+    <model-viewer id="mod" class="donut" alt="" src="./donut2.glb"  shadow-intensity="1"   ></model-viewer>
+
+
+
+      -->
+
+  
+      
+      <model-viewer class="bones"
+      
+      ar
+      ar-modes="webxr scene-viewer"
+      scale="1 1 1"
+      shadow-intensity="2"
+      camera-orbit="4deg 23deg 4m"
+      src="./deadpool.glb"
+      alt="An animated 3D model of a robot"
+     
+    ></model-viewer>
+   
+   
+
+
+    
+   
+    
+    </div>
+
+    <model-viewer 
+      class="head"
+      autoplay animation-name="RotateAnima"
+    ar
+    ar-modes="webxr scene-viewer"
+    scale="1 1 1"
+    shadow-intensity="1"
+    camera-orbit="50deg -150deg 4m"
+    src="./head.glb"
+    alt="An animated 3D model of a robot"
+   
+    ></model-viewer>
+
+    <div class="footer"><h1>Footer</h1></div>
+
+  
+
+
+  <script src="./scriptcopy.js"></script>
+</body>
+</html>
