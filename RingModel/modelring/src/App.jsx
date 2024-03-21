@@ -1,8 +1,9 @@
 import React from 'react'
+import Model from './pages/Model'
 
 const App = () => {
   return (
-    <div>App</div>
+    <Model name="Straight" size="7"/>
   )
 }
 
