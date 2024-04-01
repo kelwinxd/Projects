@@ -9,21 +9,50 @@
 <body>
     <section class="image-generator">
         <div class="content">
-            <h1>Ai Image</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et est, eum quia rem error harum quasi corrupti explicabo impedit nostrum reiciendis quam nam nisi quibusdam alias laboriosam laudantium pariatur deleniti.</p>
+            <h1>Ai Image Generator</h1>
+            <p>Explore the world of image generation with OpenAI's artificial intelligence</p>
             <form action="" class="generate-form">
                 <input type="text" name="text" class="prompt-input" id="" placeholder="describe what you want">
                 <div class="controls">
                     <select name="" id="" class="img-quantity">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4" selected>4</option>
+                        <option value="1">1 Image</option>
+                        <option value="2">2 Images</option>
+                        <option value="3">3 Images</option>
+                        <option value="4" selected>4 Images</option>
                     </select>
                     <button type="submit" class="btn-sub">Generate</button>
                 </div>
             </form>
         </div>
     </section>
+
+    <section class="image-gallery">
+        <div class="img-card">
+            <img src="images/img-1.jpg" alt="" >
+            <a href="#" class="download-btn">
+                <img src="images/download.svg" alt="" >
+            </a>
+       </div>
+       <div class="img-card">
+        <img src="images/img-2.jpg" alt="" >
+        <a href="#" class="download-btn">
+            <img src="images/download.svg" alt="" >
+        </a>
+   </div>
+   <div class="img-card">
+    <img src="images/img-3.jpg" alt="" >
+    <a href="#" class="download-btn">
+        <img src="images/download.svg" alt="" >
+    </a>
+</div>
+<div class="img-card">
+    <img src="images/img-4.jpg" alt="" >
+    <a href="#" class="download-btn">
+        <img src="images/download.svg" alt="" >
+    </a>
+</div>
+    </section>
+
+    <script src="./script.js"></script>
 </body>
 </html>
