@@ -7,6 +7,7 @@ const desc2 = document.querySelector('.desc-res')
 const sec3 = document.querySelector('.section3')
 
 console.log(rock)
+console.log('')
 
 function openRock(){
     rock.play()

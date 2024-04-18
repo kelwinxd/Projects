@@ -16,10 +16,6 @@ The website features the following components:
 
 - **JavaScript**: JavaScript is used to add interactivity to the website, allowing for dynamic content updates and user interaction. For example, JavaScript may be used to implement animations, event handling, and form validation.
 
-## Usage
 
-To view the website locally, simply clone this repository and open the `index.html` file in a web browser.
 
-```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+
