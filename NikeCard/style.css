@@ -20,6 +20,36 @@ html {
     background-color: #212121;
 }
 
+.card-wrapper {
+    width: 50rem;
+    height: 70rem;
+    background-color: #ccc;
+    padding: 0 10rem;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    width: 30rem;
+    height: 55rem;
+    background-color: #eee;
+    border-radius: 2.5rem;
+  
+   
+    
+
+
+}
+
 .shoe-1 {
     width: 30rem;
+}
+
+.card-top {
+    width:100%;
+    height: 50%;
+    background-color: rgb(243, 206, 38);
+    padding: 2rem;
+    border-radius: 2rem 2rem 0 0;
+
 }
