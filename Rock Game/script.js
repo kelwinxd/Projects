@@ -2,7 +2,9 @@ const userResult = document.querySelector('.user-result img'),
       optionImages = document.querySelectorAll('.option-image'), 
       cpuResult = document.querySelector('.cpu-result img'),
       result = document.querySelector('.result'),
-      container = document.querySelector('.container .result-images')
+      container = document.querySelector('.container .result-images'),
+      pcScote = document.querySelector('.pc'),
+      userScore = document.querySelector('.user')
 
 optionImages.forEach((img, index) => {
     img.addEventListener('click', () => {
@@ -46,6 +48,17 @@ optionImages.forEach((img, index) => {
   
            let outCome = output[userValues+cpuValues]
            result.textContent = outCome
+           if(outCome == win){
+            let content = userScore.textContent
+            let numberScore = parseFloat(content)
+            numberScore += 1
+            userScore.textContent = numberScore
+           } else if(outCome == lose){
+            let content2 = pcScote.textContent
+            let numberPCscore = parseFloat(content2)
+            numberPCscore +=1
+            pcScote.textContent = numberPCscore
+           }
             
           },1500)
 
