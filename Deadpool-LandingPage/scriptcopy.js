@@ -100,6 +100,12 @@ function updateRotation(modelViewer, scrollY) {
         document.querySelector('.head').style.height = '500px'
 
     }
+
+    if(scrollY > 4000) {
+        document.querySelector('.date').style.color = "yellow"
+    } else {
+        document.querySelector('.date').style.color = "white"
+    }
         
     
 }
