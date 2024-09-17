@@ -6,13 +6,13 @@
 }
 
 body {
-    background-color: #212121;
+    background-color: #1a0e5c;
 }
 
 .taskapp {
     width: 700px;
     height: 700px;
-    background-color: #000;
+    background-color:#5240bb;
 
 border-radius: 2rem;
 padding: 2rem;
@@ -21,7 +21,7 @@ margin: 10vh auto;
 
 justify-content: space-evenly;
 position: relative;
-box-shadow: 6px 6px 4px rgba(0,0,0,0.7);
+box-shadow: 6px 6px 4px rgba(0,0,0,0.5);
 }
 
 .taskapp form {
@@ -30,12 +30,13 @@ box-shadow: 6px 6px 4px rgba(0,0,0,0.7);
 }
 
 .taskapp form input[type="text"]{
-    width: 200px;
+    width: 250px;
     height: 30px;
     outline: none;
-    font-size:.85em;
-    padding: 0.2rem;
+    font-size:.9rem;
+    padding: 0.5rem;
     border-radius: 1rem;
+    border: none;
     
 }
 
@@ -61,7 +62,7 @@ box-shadow: 6px 6px 4px rgba(0,0,0,0.7);
     position: absolute;
     width: 550px;
     height: 600px;
-    background-color: #000000;
+    background-color: #5240bb;
     top: 6rem;
     border-radius: 0.1rem;
     overflow-y:auto;
