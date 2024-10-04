@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, Flex, Form, Typography, Input, Button} from 'antd'
+import {Card, Flex, Form, Typography, Input, Button, Spin, Alert} from 'antd'
 import  RegisterImg  from '../assets/astro1.png'
 
 
@@ -72,13 +72,15 @@ const Register = () => {
               >
               <Input.Password size='large' placeholder='Enter Your password'/>
               </Form.Item>
+
+              {/*error && <Alert description={error} type='error' showIcon closable className='alert'/>*/}
               <Form.Item>
                 <Button
-                type='primary'
+                //type={`${loading ? '' : 'primary'}`}
                 htmlType='submit'
                 size='large'
                 className='btn'
-                >Create Account</Button>
+                >{/*loading ? <Spin /> : 'Create Account'*/}Create an Account</Button>
               </Form.Item>
 
               <Form.Item>
