@@ -1,14 +1,14 @@
 import React from 'react'
 import {Card, Flex, Form, Typography, Input, Button, Spin, Alert} from 'antd'
 import  RegisterImg  from '../assets/astro1.png'
-
-
 import { Link } from 'react-router-dom';
+import useSingup from '../hooks/useSingup';
 
 const Register = () => {
+  const {loading,error,registerUser} = useSingup()
 
   const handleRegister = (values) => {
-         console.log(values);
+         registerUser(values)
          
   }
   return (
@@ -56,7 +56,7 @@ const Register = () => {
                <Input placeholder='Email'/>
               </Form.Item>
 
-                {/* Email */}
+                {/* Senha */}
                 <Form.Item 
               label="Password"
               name='password'
@@ -72,15 +72,30 @@ const Register = () => {
               >
               <Input.Password size='large' placeholder='Enter Your password'/>
               </Form.Item>
+              <Form.Item 
+              label="Password"
+              name='passwordConfirm'
+              rules={
+                [
+                  {
+                    required:true,
+                    message:'please enter your password'
+                  }
+                ]
+              }
+               validateTrigger="onBlur"
+              >
+              <Input.Password size='large' placeholder='Enter Your password'/>
+              </Form.Item>
 
-              {/*error && <Alert description={error} type='error' showIcon closable className='alert'/>*/}
+              {error && <Alert description={error} type='error' showIcon closable className='alert'/>}
               <Form.Item>
                 <Button
-                //type={`${loading ? '' : 'primary'}`}
+                type={`${loading ? '' : 'primary'}`}
                 htmlType='submit'
                 size='large'
                 className='btn'
-                >{/*loading ? <Spin /> : 'Create Account'*/}Create an Account</Button>
+                >{loading ? <Spin /> : 'Create Account'}</Button>
               </Form.Item>
 
               <Form.Item>
