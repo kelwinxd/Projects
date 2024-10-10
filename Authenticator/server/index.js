@@ -15,7 +15,7 @@ app.use('/api/auth', authRouter)
 mongoose
     .connect('mongodb://localhost:27017/authent')
     .then(() => console.log('Connected'))
-    .catch((error) => console.error('failed to connect'))
+    .catch((error) => console.error('failed to connect',error))
 
 //Global error handler
 app.use((err, req, res, next) => {

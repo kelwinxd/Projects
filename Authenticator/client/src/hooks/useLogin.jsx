@@ -3,22 +3,20 @@ import { useAuth } from '../contexts/AuthContext'
 import { message } from 'antd'
 import { Navigate } from 'react-router-dom'
 
-const useSingup = () => {
+const useLogin = () => {
 
   const {Login} = useAuth()
   const [error,setError] = React.useState(null)
   
   const [loading,setLoading] = React.useState(null)
   
-  const registerUser = async (values) => {
-          if(values.password !== values.passwordConfirm){
-           return setError('Passwords are not the same')
-          }
+  const loginUser = async (values) => {
+        
     
-          try {
+        try {
             setError(null)
             setLoading(true)
-            const res = await fetch('http://localhost:5000/api/auth/signup', {
+            const res = await fetch('http://localhost:5000/api/auth/login', {
               method:'POST',
               headers: {
                 'Content-Type':'application/json',
@@ -27,10 +25,10 @@ const useSingup = () => {
             })
 
             const data = await res.json()
-            if(res.status===201){
+            if(res.status===200){
               message.success(data.message)
               Login(data.token,data.user)
-              Navigate
+              
             }
             else if(res.status === 400){
               setError(data.message)
@@ -40,14 +38,14 @@ const useSingup = () => {
             
           }
           catch (error) {
-            
+            message.error('Login failed')
           }finally {
             setLoading(false)
           }
   }
 
 
-  return {loading,error,registerUser}
+  return {loading,error,loginUser}
 }
 
-export default useSingup
+export default useLogin
