@@ -24,6 +24,10 @@ This project is a login system developed using ReactJS for the frontend, NodeJS 
 - MongoDB running locally or hosted on a service provider.
 - Updated web browser.
 
+## Working
+![Alt Text](./assets/authgif.gif)
+
+
 ## Installation
 1. Clone the repository:
    ```bash

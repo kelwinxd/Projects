@@ -5,39 +5,46 @@ const jwt = require('jsonwebtoken')
 
 
 //Register User
-exports.signup = async (req,res,next) => {
+exports.signup = async (req, res, next) => {
     try {
-        //verificando se existe
-        const user = await User.findOne({email:req.body.email})
-        if(user){
-            return next(new createError('User already exists', 400))
-        }
-         
-        //criptografando a senha
-        const hashedPass = await bycript.hash(req.body.password,12)
-        //criando novo usuario
-        const newUser = await User.create({
-            ...req.body, 
-            password: hashedPass,
-        })
-
-        //gerar token de acesso
-        const token = jwt.sign(
-            {_id:newUser._id},
-            'secretkey123',
-            {expiresIn:'90d'}
-
-        )
-       res.status(201).json({
-        status:'success',
+      // Verificando se o usuário já existe
+      const user = await User.findOne({ email: req.body.email })
+      if (user) {
+        return next(new createError('User already exists', 400))
+      }
+  
+      // Criptografando a senha
+      const hashedPass = await bycript.hash(req.body.password, 12)
+  
+      // Criando o novo usuário
+      const newUser = await User.create({
+        ...req.body,
+        password: hashedPass,
+      })
+  
+      // Gerando token de acesso
+      const token = jwt.sign(
+        { _id: newUser._id },
+        'secretkey123',
+        { expiresIn: '90d' }
+      )
+  
+      // Retornando o token e as informações do usuário
+      res.status(201).json({
+        status: 'success',
         message: 'User Registered',
-        token
-       })
-
+        token,
+        user: {
+          _id: newUser._id,
+          name: newUser.name,
+          email: newUser.email,
+          role: newUser.role
+        }
+      })
     } catch (error) {
-        next(error)
+      next(error)
     }
-}
+  }
 
 
 

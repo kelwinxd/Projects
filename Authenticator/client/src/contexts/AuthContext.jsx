@@ -8,6 +8,7 @@ export const AuthProvider = ({children}) => {
     const [token,setToken] = useState(null)
     const [userData, setUserData] = useState(null)
     const [isAuth, setIsAuth] = useState(false)
+    const [isReg, setIsReg] = useState(false)
     const storedData = JSON.parse(localStorage.getItem('user_data'))
 
     useEffect(() => {
@@ -16,6 +17,7 @@ export const AuthProvider = ({children}) => {
           setToken(userToken);
           setUserData(user);
           setIsAuth(true);
+          setIsReg(true)
         }
       }, []);
 

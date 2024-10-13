@@ -18,3 +18,18 @@ body {
 .btn {
   width: 100%;
 }
+
+.flex {
+text-align: center;
+justify-content: center;
+
+}
+
+.card {
+  width: 500px;
+}
+
+.avatar {
+  justify-self: center;
+  align-self: center;
+}

@@ -30,7 +30,7 @@ const useSingup = () => {
             if(res.status===201){
               message.success(data.message)
               Login(data.token,data.user)
-              Navigate
+          
             }
             else if(res.status === 400){
               setError(data.message)

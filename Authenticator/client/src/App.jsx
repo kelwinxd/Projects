@@ -12,9 +12,9 @@ const App = () => {
   return (
    <Router>
     <Routes>
-      <Route path='/' element={!isAuth ? <Register /> : <Navigate to="/dashboard"/>} />
+      <Route path='/' element={!isAuth ? <Register /> : <Navigate to="/login"/>} />
       <Route path='/login' element={!isAuth ? <Login /> : <Navigate to="/dashboard" />} />
-      <Route path='/dashboard' element={isAuth ? <Dashboard /> : <Login />} />
+      <Route path='/dashboard' element={isAuth ? <Dashboard /> : <Navigate to='/login'/>} />
 
     </Routes>
    </Router>
