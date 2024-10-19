@@ -1,0 +1,14 @@
+.container {
+text-decoration: none;
+color: #fff;
+display: flex;
+padding:20px;
+align-items: center;
+gap: 10px;
+margin: 5px 0;
+}
+
+.container:hover, .container.active {
+    background-color:var(--bgHover);
+    border-radius: 5px;
+}
