@@ -2,7 +2,7 @@
 
 This is a **dashboard project** in development, built using [Next.js](https://nextjs.org) and bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-![Dashboard Preview](public/dashboardimg.png)
+![Dashboard Preview](public/dashimg.png)
 
 ## Getting Started
 

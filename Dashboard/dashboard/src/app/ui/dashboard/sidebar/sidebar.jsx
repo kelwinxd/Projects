@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './sidebar.module.css'
-import { MdDns,MdSupervisedUserCircle,MdShoppingBag,MdAttachMoney,MdWork,MdAnalytics,MdPeople,MdOutlineSettings,MdHelpCenter,MdLogout, MdDashboard } from "react-icons/md";
+import { MdDns,MdSupervisedUserCircle,MdShoppingBag,MdAttachMoney,MdWork,MdAnalytics,MdPeople,MdOutlineSettings,MdHelpCenter,MdDashboard, Mdlogout, MdArrowBack } from "react-icons/md";
 import MenuLink from './MenuLinks/menuLink';
 
 const menuItems = [
@@ -39,12 +39,12 @@ const menuItems = [
       },
       {
         title:"Reports",
-        path:"/dash/revenue",
+        path:"/dash/reports",
         icon:<MdWork />,
       },
       {
         title:"Teams",
-        path:"/dash/revenue",
+        path:"/dash/teams",
         icon:<MdPeople />,
       },
     ]
@@ -59,7 +59,7 @@ const menuItems = [
       },
       {
         title:"Help",
-        path:"/dash/revenue",
+        path:"/dash/help",
         icon:<MdHelpCenter />,
       },
    
@@ -90,6 +90,10 @@ const Sidebar = () => {
         </li>
       ))}
        </ul>
+       <button className={styles.logout}>
+
+          <MdArrowBack />   Logout
+        </button>
     </div>
   )
 }

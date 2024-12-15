@@ -29,3 +29,25 @@
     width: 40px;
     border-radius: 50%;
 }
+
+.logout {
+    text-decoration: none;
+color: #fff;
+display: flex;
+padding:20px;
+align-items: center;
+gap: 10px;
+margin: 5px 0;
+background-color: transparent;
+border: none;
+font-size: 17px;
+width: 100%;
+cursor: pointer;
+
+}
+
+.logout:hover {
+    background-color:var(--bgHover);
+    border-radius: 5px;
+}
+

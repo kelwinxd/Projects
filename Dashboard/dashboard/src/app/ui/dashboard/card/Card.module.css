@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    background-color: var(--bgSoft);
+    width: 100%;
+    gap: 15px;
+    padding: 1rem;
+    border-radius: 10px;
+    align-items: start;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.Number {
+    font-size: 20px;
+}
+
+.detail {
+    font-size: 14px;
+}
+
+.detail span {
+    color: green;
+}
